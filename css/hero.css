@@ -55,8 +55,8 @@ button{
     display: none;
  }
 
-/* clints section starts here */
-.clints{
+/* clients section starts here */
+.clients{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,17 +64,17 @@ button{
     font-family: 'Poppins';
     padding: 0 1rem;
 }
-.clint-text {
+.client-text {
     text-align: center;
 }
-.clint-text .title{
+.client-text .title{
     font-weight: 600;
     font-size: 2.4rem;
 }
-.clint-text .subtitle{
+.client-text .subtitle{
     color:#565656 ;
 }
-.clint-logo .logo{
+.client-logo .logo{
     padding: 20px 0;
 }
 
@@ -93,19 +93,19 @@ button{
         width: 50%;
     }
 
-    /* clint section */
-    .clints{
+    /* client section */
+    .clients{
         margin-top: 4rem;
     }
-    .clint-logo{
+    .client-logo{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-    .clint-logo .logo{
+    .client-logo .logo{
         padding: 10px 40px;
     }
-    .clint-text {
+    .client-text {
         text-align: left;
     }
 }
@@ -165,17 +165,17 @@ button{
         display: block;
     }
 
-    /* clint section */
-    .clints{
+    /* client section */
+    .clients{
         flex-direction: row;
         align-items: center;
     }
-    .clint-logo{
+    .client-logo{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         align-items: center;
     }
-    .clint-logo .logo{
+    .client-logo .logo{
         padding:10px;
     }
 }
