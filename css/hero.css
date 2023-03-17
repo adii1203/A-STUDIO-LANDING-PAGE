@@ -1,0 +1,126 @@
+main{
+    width: min(75rem, 100%);
+    margin-inline: auto;
+
+}
+.hero{
+    font-family: "Poppins";
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-block: 2rem;
+}
+.hero__left{
+    display: flex;
+    flex-direction: column;
+    gap:1.8rem;
+    text-align: center;
+}
+.hero__left h1{
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+.hero__left p{
+    font-size: 15px;
+    color: #565656;
+}
+.hero__left img{
+    display: none;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: blue;
+    padding: .8rem 0;
+    border-radius: 28px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    width: 80%;
+}
+.hero__right{
+    margin-block:2rem ;
+ }
+.hero__right img{
+    border-bottom-left-radius: 80px;
+}
+.bp-top{
+    position: absolute;
+    top:-20px;
+    z-index: -1;
+ } 
+ .bp-bottom{
+    display: none;
+ }
+
+@media (min-width:720px){
+    .hero{
+        padding: 0 1rem;
+        flex-direction: column-reverse;
+        margin-block: 0;
+    }
+    .bp-top{
+        top:380px;
+    }
+    button{
+        font-weight: 600;
+        width: 50%;
+    }
+}
+@media (min-width:1024px){
+    .hero{
+        padding: 1.4rem;
+        font-family: "Poppins";
+        position: relative;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+    }
+    .hero__left{
+        display: flex;
+        flex-direction: column;
+        gap:2.8rem;
+        text-align: left;
+        width: 100%;
+    }
+    button{
+        outline: none;
+        border: none;
+        background-color: blue;
+        padding: .6rem 0;
+        border-radius: 28px;
+        color: #fff;
+        font-weight: 600;
+        width: 40%;
+    }
+    .hero__right{
+        margin-block:1rem;
+        height: 500px;
+        background-size: 110px;
+        background-position: top 0px left 20px, bottom 55px right 0;
+        display: block;
+     }
+    .hero__right img{
+        border-bottom-left-radius: 210px;
+        width: 100%;
+        transform: translateX(78px);
+    }
+    .bp-top{
+        top: 0;
+    }
+    .bp-bottom{
+        display: block;
+        position:absolute;
+        bottom: 80px;
+        right: 0;
+        z-index: -3;
+    }
+    .hero__left img{
+        position: absolute;
+        bottom: 1rem;
+        left: -2rem;
+        z-index: -1;
+        display: block;
+    }
+}
