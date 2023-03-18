@@ -1,4 +1,5 @@
-main{
+.hero,
+.clients{
     width: min(75rem, 100%);
     margin-inline: auto;
 
@@ -56,7 +57,8 @@ button{
  }
 
 /* clients section starts here */
-.clients{
+.clients,
+.service{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,18 +66,78 @@ button{
     font-family: 'Poppins';
     padding: 0 1rem;
 }
-.client-text {
+.text-box {
     text-align: center;
 }
-.client-text .title{
+.text-box .title{
     font-weight: 600;
     font-size: 2.4rem;
 }
-.client-text .subtitle{
+.text-box .subtitle{
     color:#565656 ;
 }
-.client-logo .logo{
+.logo-box .logo{
     padding: 20px 0;
+}
+/* service */
+.service{
+    background-image: 
+        url(/assets/background-patterns/Rectangle\ 24.svg),
+        url(/assets/background-patterns/Rectangle\ 25.svg),
+        url(/assets/background-patterns/Group\ 70.svg);
+    background-repeat: no-repeat;
+    background-size: cover, 0, 0;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+.product{
+    display: grid;
+    gap: 2rem;
+}
+.product__box{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: center;
+    text-align: center;
+    padding: 2rem .8rem;
+    width:240px;
+    margin-inline: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.product__logo{
+    background-color: #F1F7FF; 
+    border-radius:14px ;
+    padding: 12px;
+} 
+.product__box:nth-child(2) .product__logo{
+    background-color: #FFF7E3;
+}
+.product__box:nth-child(3) .product__logo{
+    background-color:#FFF2F8 ;
+}
+.product__box:nth-child(4) .product__logo{
+    background-color:#DEFFEE ;
+}
+
+.product__logo img{
+    width: 44px;
+}
+.service .text-box .title{
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+.product__box .product__title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0 10px;
+}
+.product__box .product__subtitle{
+    color:#757575 ;
+    font-size: 14px;
 }
 
 /* Media Quries */
@@ -93,22 +155,35 @@ button{
         width: 50%;
     }
 
-    /* client section */
     .clients{
         margin-top: 4rem;
     }
-    .client-logo{
+    .logo-box{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-    .client-logo .logo{
+    .logo-box .logo{
         padding: 10px 40px;
     }
-    .client-text {
+    .text-box {
         text-align: left;
     }
+    .product{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product__box:nth-child(1),
+    .product__box:nth-child(3){
+        transform: translateY(6rem);
+    }
+    .service{
+        background-position: top 200px left 0, top 0 left 0;
+        background-size: cover, 160px,0px;
+    }
 }
+
+
 @media (min-width:1024px){
     .hero{
         padding: 1.4rem;
@@ -165,17 +240,29 @@ button{
         display: block;
     }
 
-    /* client section */
     .clients{
         flex-direction: row;
         align-items: center;
     }
-    .client-logo{
+    .logo-box{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         align-items: center;
     }
-    .client-logo .logo{
+    .logo-box .logo{
         padding:10px;
+    }
+    .service{
+        background-position: top 280px left 0, top 0px left 75px;
+        background-size: cover, 160px, 0px;
+    }
+    .product{
+        margin-top: 4rem;
+    }
+}
+@media (min-width:1400px){
+    .service{
+        background-position: top 280px left 0, top 0px left 295px, top 60px right 220px;
+        background-size: cover, 160px, 260px;
     }
 }
